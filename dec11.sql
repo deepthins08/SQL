@@ -1,3 +1,21 @@
+select * from medicine; pk name
+desc medicine;
+select * from doctor;PK name fk medicine
+desc doctor;
+select * from car; pk brand fk ownername
+desc car;
+select * from sportsman; pk sport_type fk car_brand
+desc sportsman;
+select * from sports_equipments;
+desc sports_equipments; pk equip_name fk sport_type_1
+
+SELECT chemical_name1 from medicine where name =
+(SELECT medicine from doctor where name = 
+(SELECT owner_name from car where brand = 
+(SELECT car_brand from sportsman where sport_type = 
+(SELECT sport_type_1 from sports_equipments where manufacturer = 'Yonex'))));
+
+
 select * from medicine;
 select * from doctor;
 select * from car;
